@@ -1,25 +1,140 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
 
-    <TableLayout
-        android:id="@+id/tableLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
-    </TableLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tableLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:text="Total"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+            <Button
+                android:id="@+id/firstDice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="/" />
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/secondDice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/thirdDice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/fourthDice"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="/" />
+            
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/skillMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/button5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/button6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/button7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="3" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/button8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/button9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/button10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="6" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/button11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/button12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/button13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="skillClickHandler"
+                    android:text="9" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/displayResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            android:text="Result"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
