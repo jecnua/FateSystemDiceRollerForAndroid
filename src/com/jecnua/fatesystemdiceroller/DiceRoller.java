@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DiceRoller extends Activity {
@@ -171,7 +172,9 @@ public class DiceRoller extends Activity {
         //n.setBackgroundColor(Color.BLUE);
 //        n.setText("["+n.getText()+"]");
         
+        /*
         Button tempB = (Button)findViewById(R.id.firstDice);
+        
         tempB.setText(""+FSU.resultForSingleDice[0]);
         tempB = (Button)findViewById(R.id.secondDice);
         tempB.setText(""+FSU.resultForSingleDice[1]);
@@ -179,11 +182,29 @@ public class DiceRoller extends Activity {
         tempB.setText(""+FSU.resultForSingleDice[2]);
         tempB = (Button)findViewById(R.id.fourthDice);
         tempB.setText(""+FSU.resultForSingleDice[3]);
+        */
         
+        ImageView i = (ImageView)findViewById(R.id.firstDice);
+        changeImage(i, FSU.resultForSingleDice[0]);
+        i = (ImageView)findViewById(R.id.secondDice);
+        changeImage(i, FSU.resultForSingleDice[1]);
+        i = (ImageView)findViewById(R.id.thirdDice);
+        changeImage(i, FSU.resultForSingleDice[2]);
+        i = (ImageView)findViewById(R.id.fourthDice);
+        changeImage(i, FSU.resultForSingleDice[3]);
         
 //        totalOfTheDice.setText(""+FSU.resultTotalDices);
     }
 
+    
+    public void changeImage(ImageView image, int dice){
+    	switch(dice){
+	    	case (-1): image.setImageResource(R.drawable.minus); break;
+	    	case (0): image.setImageResource(R.drawable.nothing); break;
+	    	case (1): image.setImageResource(R.drawable.plus); break;
+	    	default: image.setImageResource(R.drawable.minus);
+    	}
+    }
     
     
 
