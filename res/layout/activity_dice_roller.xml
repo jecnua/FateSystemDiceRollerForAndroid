@@ -144,7 +144,7 @@
          android:layout_height="wrap_content"
          android:layout_alignTop="@+id/skillMatrix"
          android:layout_toLeftOf="@+id/skillMatrix"
-         android:src="@drawable/bigarrowup" />
+         android:src="@drawable/arrowdown" />
 
      <ImageView
          android:id="@+id/imageView1"
