@@ -52,17 +52,55 @@ public class DiceRoller extends Activity {
         changeImage(i, FSU.resultForSingleDice[3]);
         
         //Show the total result of the dice
-//        totalOfTheDice.setText(""+FSU.resultTotalDices);
+        changeArrows((ImageView)findViewById(R.id.imageView1), (ImageView)findViewById(R.id.imageView2), FSU.resultTotalDices);
+        
         
     }
 
+    public void changeArrows(ImageView up, ImageView down, int dice){
+    	switch(dice){
+	    	case (4):
+	    	case (3):
+	    		up.setVisibility(View.VISIBLE);
+	    		up.setImageResource(R.drawable.bigarrowup);
+	    		down.setVisibility(View.INVISIBLE);
+	    		break;
+	    	case (2):
+	    	case (1):
+	    		up.setVisibility(View.VISIBLE);
+	    		up.setImageResource(R.drawable.arrowup);
+	    		down.setVisibility(View.INVISIBLE);
+	    		break;
+	    	case (0):
+	    		up.setVisibility(View.INVISIBLE);
+	    		down.setVisibility(View.INVISIBLE);
+	    		break;
+	    	case (-1):
+	    	case (-2):
+	    		up.setVisibility(View.INVISIBLE);
+		    	down.setVisibility(View.VISIBLE);	
+		    	down.setImageResource(R.drawable.arrowdown);
+	    		break;
+	    	case (-3): 
+	    	case (-4):
+	    		up.setVisibility(View.INVISIBLE);
+		    	down.setVisibility(View.VISIBLE);	
+		    	down.setImageResource(R.drawable.bigarrowdown);
+    	}
+    }
+    
     
     public void changeImage(ImageView image, int dice){
     	switch(dice){
-	    	case (-1): image.setImageResource(R.drawable.minus); break;
-	    	case (0): image.setImageResource(R.drawable.nothing); break;
-	    	case (1): image.setImageResource(R.drawable.plus); break;
-	    	default: image.setImageResource(R.drawable.minus);
+	    	case (-1):
+	    		image.setImageResource(R.drawable.minus);
+	    		break;
+	    	case (0):
+	    		image.setImageResource(R.drawable.nothing);
+	    		break;
+	    	case (1):
+	    		image.setImageResource(R.drawable.plus);
+	    		break;
     	}
     }
     
